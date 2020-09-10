@@ -19,11 +19,11 @@ public class cp614_ED_Registracion_Mail_no_federado_Documento_con_formato_incorr
     @Test
     public void cp614() throws InterruptedException {
         Steps_Login sl = new Steps_Login(driver);
-        Thread.sleep(6000);
+        //Thread.sleep(6000);
         sl.clickTengoUsuarioRegistrarme();
         Fachada_Registro_Login frl = new Fachada_Registro_Login();
         frl.registrar(email,pass);
-        Thread.sleep(6000);
+        //Thread.sleep(6000);
         Fachada_Registro fr = new Fachada_Registro();
         fr.completarInicioDelRegistro(dni,genero,area,telefono);
         Steps_Registro_InicioDelRegistro sri =  new Steps_Registro_InicioDelRegistro(driver);

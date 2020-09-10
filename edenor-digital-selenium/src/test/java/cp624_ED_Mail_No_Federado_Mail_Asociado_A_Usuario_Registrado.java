@@ -8,10 +8,11 @@ public class cp624_ED_Mail_No_Federado_Mail_Asociado_A_Usuario_Registrado extend
     private String pass = "Prueba2018";
 
     @Test
-    public void cp624() throws InterruptedException {
+    public void cp624() throws Exception {
         Fachada_Login fl = new Fachada_Login();
         fl.loginConEmailNoFederado(email,pass);
         Fachada_Home fh =  new Fachada_Home();
         fh.cerrarBienvenida();
+        generarLog(driver.getTitle().equalsIgnoreCase("edenor | Oficina online las 24hs"),"Ingreso a home ED");
     }
 }

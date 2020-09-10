@@ -12,6 +12,7 @@ public class Steps_Notificaciones extends Steps_Base {
 
     public Steps_Notificaciones(WebDriver driver) {
         super(driver);
+        validate();
     }
 
     public void validate(){

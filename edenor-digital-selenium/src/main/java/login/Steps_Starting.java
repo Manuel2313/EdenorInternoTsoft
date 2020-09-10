@@ -17,9 +17,10 @@ public class Steps_Starting extends Steps_Base {
     public void clickButtonIngresarConEmail(){
         //isElementVisible(buttonContinuarConEmail);
         click(buttonContinuarConEmail);
+        //validate();
     }
     public void validate(){
-        CustomAssert.assertTrue(driver.findElement(buttonContinuarConEmail).isDisplayed(),"no se encuentra boton e-mail");
+        CustomAssert.assertTrue("no se encuentra boton e-mail",driver.findElement(buttonContinuarConEmail).isDisplayed());
     }
 
 }

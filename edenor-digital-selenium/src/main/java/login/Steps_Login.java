@@ -71,44 +71,44 @@ public class Steps_Login extends Steps_Base {
         click(buttonVolverAInicio);
     }
 
-    public boolean isGmailLogoVisible(){
-        return checkVisibility(GMAIL_LOGO);
+    public void  isGmailLogoVisible(){
+        checkVisibility(GMAIL_LOGO);
     }
 
-    public boolean isPasswordVisible(){
-        return checkVisibility(inputPassword);
+    public void isPasswordVisible(){
+         checkVisibility(inputPassword);
     }
 
-    public boolean isSignInVisible(){
-        return checkVisibility(buttonSigIn);
+    public void  isSignInVisible(){
+         checkVisibility(buttonSigIn);
     }
 
-    public boolean isIngresaConTuredSocialVisible(){
-        return checkVisibility(INGREA_CON_TU_RED_SOCIAL);
+    public void  isIngresaConTuredSocialVisible(){
+         checkVisibility(INGREA_CON_TU_RED_SOCIAL);
     }
 
-    public boolean isOlvideMiContrasenaVisible(){
-        return checkVisibility(buttonOlvideContrasena);
+    public void  isOlvideMiContrasenaVisible(){
+         checkVisibility(buttonOlvideContrasena);
     }
 
-    public boolean isEdenorLogoVisible(){
-        return checkVisibility(EDENOR_LOGO_GRANDE);
+    public void  isEdenorLogoVisible(){
+         checkVisibility(EDENOR_LOGO_GRANDE);
     }
 
-    public boolean isTodaLainfoEnSuLugarVisible(){
-        return checkVisibility(TODA_LA_INFO_EN_SU_LUGAR);
+    public void  isTodaLainfoEnSuLugarVisible(){
+         checkVisibility(TODA_LA_INFO_EN_SU_LUGAR);
     }
 
-    public boolean isDescargaTuUltimaFacturaVisible(){
-        return checkVisibility(DESCARGA_TU_ULTIMA_FACTURA);
+    public void  isDescargaTuUltimaFacturaVisible(){
+         checkVisibility(DESCARGA_TU_ULTIMA_FACTURA);
     }
 
-    public boolean isPagaTusFacturasVisible(){
-        return checkVisibility(PAGA_TUS_FACTURAS);
+    public void  isPagaTusFacturasVisible(){
+         checkVisibility(PAGA_TUS_FACTURAS);
     }
 
-    public boolean isGestionaTusCuentasVisible(){
-        return checkVisibility(GESTIONA_TUS_CUENTAS);
+    public void  isGestionaTusCuentasVisible(){
+         checkVisibility(GESTIONA_TUS_CUENTAS);
     }
 
 }

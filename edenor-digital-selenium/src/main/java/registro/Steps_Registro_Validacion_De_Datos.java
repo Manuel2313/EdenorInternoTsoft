@@ -22,8 +22,8 @@ public class Steps_Registro_Validacion_De_Datos extends Steps_Base {
         driver.findElement(CHECKBOX_NINGUNO_DE_LOS_ANTERIORES_2).click();
     }
     public void validate(){
-        CustomAssert.assertTrue(waitForElementVisible(HEADER),"No se encuentra el header");
-        CustomAssert.assertTrue(waitForElementVisible(CHECKBOX_NINGUNO_DE_LOS_ANTERIORES_0),"No se encuntra opcion");
+        CustomAssert.assertTrue("No se encuentra el header",waitForElementVisible(HEADER));
+        CustomAssert.assertTrue("No se encuntra opcion",waitForElementVisible(CHECKBOX_NINGUNO_DE_LOS_ANTERIORES_0));
     }
     public void ingresarDatosDeValidacion(String respuesta1, String respuesta2, String respuesta3){
     }

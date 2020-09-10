@@ -19,7 +19,7 @@ public class Fachada_RecuperarContraseña extends BaseTest {
         stepsRecuperarContrasena.ingresarMail("mail sin arroba ni punto");
         stepsRecuperarContrasena.cliclEnviarSolicitud();
         //Assert.assertTrue(stepsRecuperarContrasena.isMensajeMailIncorrectoVisible(),"FAILED: No se encuentra mensaje de email inválido");
-        CustomAssert.assertTrue(stepsRecuperarContrasena.isMensajeMailIncorrectoVisible(),"FAILED: No se encuentra mensaje de email inválido");
+        CustomAssert.assertTrue("FAILED: No se encuentra mensaje de email inválido",stepsRecuperarContrasena.isMensajeMailIncorrectoVisible());
         stepsRecuperarContrasena.clickVolver();
     }
     public void TC_619_RecuperarContrasenaMailFormatoValidoUsuarioNoRegistrado() throws InterruptedException {
@@ -29,19 +29,21 @@ public class Fachada_RecuperarContraseña extends BaseTest {
         stepsRecuperarContrasena = new Steps_RecuperarContraseña(driver);
         stepsRecuperarContrasena.ingresarMail("mail_con_arroba_@maiol.cc");
         stepsRecuperarContrasena.cliclEnviarSolicitud();
-        //stepsRecuperarContrasena.waitForAlertDialog("Usuario no registrado, por favor verifique los datos ingresados.");
-        Thread.sleep(4000);
+        //Thread.sleep(6000);
+        stepsRecuperarContrasena.waitForAlertDialog();
+        //Thread.sleep(4000);
         stepsRecuperarContrasena.clickVolver();
-        Thread.sleep(4000);
+        //Thread.sleep(4000);
     }
-    public void TC_620_RecuperarContrasenaMailValidoUsuarioRegistrado(String usuario){
+    public void TC_620_RecuperarContrasenaMailValidoUsuarioRegistrado(String usuario) throws InterruptedException {
         stepsStarting = new Steps_Starting(driver);
         stepsStarting.clickButtonIngresarConEmail();
         stepsLogin.clickOlvideMiContrsena();
         stepsRecuperarContrasena = new Steps_RecuperarContraseña(driver);
         stepsRecuperarContrasena.ingresarMail(usuario);
         stepsRecuperarContrasena.cliclEnviarSolicitud();
-        //stepsRecuperarContrasena.waitForAlertDialog("En instantes recibirás un correo electrónico con instrucciones para cambiar tu contraseña. Si no ves el correo en tu bandeja de entrada, revisá la carpeta de correo no deseado.")
+        //Thread.sleep(4000);
+        stepsRecuperarContrasena.waitForAlertDialog();
     }
 
 }

@@ -21,7 +21,7 @@ public class Steps_Registro_Validacion_Email extends Steps_Base {
         click(CONTINUAR);
     }
 
-    public boolean validatee(){
-        return checkVisibility(HEADER);
+    public void validatee(){
+        checkVisibility(HEADER);
     }
 }

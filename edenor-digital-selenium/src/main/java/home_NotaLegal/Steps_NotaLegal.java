@@ -5,8 +5,8 @@ import modelBase.Steps_PopUp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Steps_NotalLegal extends Steps_PopUp {
-    public Steps_NotalLegal(WebDriver driver) {
+public class Steps_NotaLegal extends Steps_PopUp {
+    public Steps_NotaLegal(WebDriver driver) {
         super(driver);
     }
 

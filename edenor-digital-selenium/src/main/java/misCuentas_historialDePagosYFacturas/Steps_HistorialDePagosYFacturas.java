@@ -14,6 +14,7 @@ public class Steps_HistorialDePagosYFacturas extends Steps_Base {
 
     public Steps_HistorialDePagosYFacturas(WebDriver driver) {
         super(driver);
+        validate();
     }
 
     public void validate(){

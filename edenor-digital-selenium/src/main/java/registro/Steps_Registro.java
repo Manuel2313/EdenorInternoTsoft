@@ -12,8 +12,8 @@ public class Steps_Registro extends Steps_Base {
         super(driver);
     }
 
-    public boolean isErrorMsgVisible(){
-        return checkVisibility(ERROR_MSG);
+    public void isErrorMsgVisible(){
+         checkVisibility(ERROR_MSG);
     }
 
 }

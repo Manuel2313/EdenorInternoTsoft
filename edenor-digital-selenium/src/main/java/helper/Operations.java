@@ -2,7 +2,9 @@ package helper;
 
 import helper.Context;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -27,6 +29,8 @@ public abstract class Operations extends Context {
         driver.findElement(locator).sendKeys(text);
     }
     public void click(By locator){
+        WebDriverWait waitClick = new WebDriverWait(driver,10);
+        waitClick.until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
     }
     public void visit(String url){
@@ -45,6 +49,7 @@ public abstract class Operations extends Context {
         }
 
     }
+
 
 
 

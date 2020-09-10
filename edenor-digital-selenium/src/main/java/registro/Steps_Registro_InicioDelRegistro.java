@@ -4,6 +4,7 @@ import helper.CustomAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import registro.Steps_Registro;
 
 public class Steps_Registro_InicioDelRegistro extends Steps_Registro {
@@ -36,6 +37,6 @@ public class Steps_Registro_InicioDelRegistro extends Steps_Registro {
     }
 
     public void verificarErrorDNIFormatoInvalido(){
-        CustomAssert.assertTrue(waitForElementVisible(label_dni_formato_invalido),"No aparece el mesnaje formato invalido de DNI");
+        CustomAssert.assertTrue("No aparece el mensaje formato invalido de DNI",waitForElementVisible(label_dni_formato_invalido));
     }
 }

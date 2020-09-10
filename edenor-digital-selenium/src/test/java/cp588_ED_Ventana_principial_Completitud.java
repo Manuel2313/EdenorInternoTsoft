@@ -14,10 +14,10 @@ public class cp588_ED_Ventana_principial_Completitud extends BaseTest {
     public void cp588() throws InterruptedException {
         Fachada_Login fl =  new Fachada_Login();
         fl.loginConEmailNoFederado(usuario,password);
-        Steps_ModalBienvenida smb = new Steps_ModalBienvenida(driver);
-        smb.cerrarBienvenida();
         Steps_AsociaTuCuenta atc = new Steps_AsociaTuCuenta(driver);
         atc.cerrarVentana();
+        Steps_ModalBienvenida smb = new Steps_ModalBienvenida(driver);
+        smb.cerrarBienvenida();
         Steps_Home sh = new Steps_Home(driver);
         sh.validate();
     }

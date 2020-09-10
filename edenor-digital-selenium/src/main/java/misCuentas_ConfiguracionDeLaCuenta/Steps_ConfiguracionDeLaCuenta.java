@@ -4,10 +4,11 @@ import helper.CustomAssert;
 import modelBase.Steps_Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class Steps_ConfiguracionDeLaCuenta extends Steps_Base {
 
-    private By address = By.xpath("//span[text()='Dirección']//following::span[1]");
+    private By address = By.xpath("/html/body/div[1]/div/div[2]/div[4]/div[2]/div/div[2]/div[2]/div/span"); //By.xpath("//span[text()='Dirección']//following::span[1]");
     private By nroCuenta = By.xpath("//span[text()='Número de cuenta']//following::span[1]");
     private By nomTitular = By.xpath("//span[text()='Nombre del titular']//following::span[1]");
     private By nroTarifa = By.xpath("//span[text()='Tarifa']//following::span[1]");
@@ -30,7 +31,7 @@ public class Steps_ConfiguracionDeLaCuenta extends Steps_Base {
         CustomAssert.assertequalsText("Textos Distintos",driver.findElement(nroCuenta).getText(),numeroDeCuenta);
     }
     public void verificarNombreTitular(String nombreTitular){
-        CustomAssert.assertequalsText("Textos Distintos",driver.findElement(nroCuenta).getText(),nombreTitular);
+        CustomAssert.assertequalsText("Textos Distintos",driver.findElement(nomTitular).getText(),nombreTitular);
     }
     public void verificarEstado(String estadoo){
         CustomAssert.assertequalsText("Textos Distintos",driver.findElement(estado).getText(),estadoo);
